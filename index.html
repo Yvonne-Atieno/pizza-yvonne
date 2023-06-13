@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matamu Pizza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="topnav">
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="#order">Order Now</a>
+            <a class="active" href="index.html">Sweet Pizza</a>
+          </div>
+        <section class="top" id="banner">
+            <a href="#" class="logo">Pizza<span>Inn</span></a>
+    
+            <div class="content">
+                <h2>Welcome to Sweet Pizza-Inn</h2>
+                <p>We serve the best high class Pizza at affordable price.always happy to be of your service</p>
+            </div>
+    
+        </section>
+        <div class="section">
+            <div class="we-do-h2"><h2 >Our Menu</h2></div>
+            <div class="accordion what-we-do" id="accordionExample">
+                <div class="card">
+                  <div class="card-header pic1" id="headingOne">
+                        
+                            <img height="350" width="450" src="./images/cheese.jpg" alt="cheese">
+                            <p class="mb-0">Cheese</p>
+                        
+                  </div>
+              
+                  <div id="collapseOne" class="collapse p1" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>Cheese</h2>
+                        <p>Our design practice offers a full range of services including brand strategy, interaction
+                             and visual design and user experience testing.
+                            Throughout your project, our designers create and implement visual design and workflows, 
+                            solicit user feedback and work with you to make sure what gets built is what is needed.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header pic2" id="headingTwo">
+                        <img height="350" width="450" src="./images/pepperoni.jpg" alt="veggie">
+                        <p class="mb-0">Veggie</p>
+                  </div>
+                  <div id="collapseTwo" class="collapse p2" aria-labelledby="headingTwo" >
+                    <div class="card-body" >
+                        <h2>Veggie</h2>
+                        <p>All engineers are fluent in the latest enterprise, mobile and web development technologies.
+                        They collaborate with your team to write, and improve code on a daily basis, 
+                        using proven practices such as test-driven development and pair programming.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header pic3" id="headingThree">
+                        <img height="350" width="450" src="./images/veggie.jpg" alt="pepperoni">
+                        <p class="mb-0">Pepperoni</p>
+                  </div>
+                  <div id="collapseThree" class="collapse p3" aria-labelledby="headingThree" > 
+                        <h2>Pepperoni</h2>
+                        <p>Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live. 
+                            This iterative process allows for changes as business requirements evolve.
+                            </p>
+                    
+                  </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+          <div class="row">
+              <div class="col-md-4" id="order">
+                  <h3 id="form-title">Make Your order</h3>
+                  <hr />
+                  <form id="pizza-form">
+                      <div class="form-group">
+                          <label for="type">Select the type of your choice:</label>
+                          <select class="form-control" id="type" required>
+                              <option value="">choose...</option>
+                              <option value="Cheese">Cheese</option>
+                              <option value="Pepperoni">Pepperoni</option>
+                              <option value="Veggie">Veggie</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="size">The Size of Pizza you want:</label>
+                          <select class="form-control" id="size" required>
+                              <option value="">choose...</option>
+                              <option value="large">Large</option>
+                              <option value="Medium">Medium</option>
+                              <option value="Small">Small</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="topping">Topping you want on your Pizza</label>
+                          <select class="form-control" id="topping" required>
+                              <option value="">choose...</option>
+                              <option value="Mushroom">Mushroom</option>
+                              <option value="Pancetta">Pancetta</option>
+                              <option value="Brocoli">Brocoli</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="crust">Crust of your choice</label>
+                          <select class="form-control" id="crust" required>
+                              <option value="">choose...</option>
+                              <option value="Crispy">Crispy</option>
+                              <option value="Stuffed">Stuffed</option>
+                              <option value="Gluten free">Gluten free</option>
+                          </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Order</button>
+                  </form>
+                  <br />
+              </div>
+              <div class="col-md-8 hidden" id="orders-div">
+                  <h3>Order Details</h3>
+                  <table class="table table-striped table-dark">
+                      <thead>
+                          <tr>
+                              <th scope="col">Type</th>
+                              <th scope="col">Crust</th>
+                              <th scope="col">Topping</th>
+                              <th scope="col">Total</th>
+                          </tr>
+                      </thead>
+                      <tbody id="order-summary"></tbody>
+                  </table>
+                  <p class="delivery-cost hidden">
+                      Delivery: Ksh. <span id="delivery-amount"></span>
+                  </p>
+                  <p class="total-amount hidden">
+                      Total: Ksh. <span id="total-amount"></span>
+                  </p>
+                  <br /><br />
+                  <button class="btn btn-primary hidden" id="checkout">Checkout</button>
+              </div>
+          </div>
+       <div class="checkout-options hidden">
+          <h3>Checkout Form</h3>
+          <form id="checkout-form">
+              <div class="form-group">
+                  <label>Enter your Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required />
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">Delivery Option</label>
+                  <select class="form-control" id="delivery-option" required>
+                      <option value="">Choose...</option>
+                      <option value="deliver">Delivery</option>
+                      <option value="collect">Collection</option>
+                  </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+      <div class="location hide">
+          <form id="location-form">
+              <h3>Enter Location</h3>
+              <div class="form-group">
+                  <label>Estate</label>
+                  <input type="text" class="form-control" id="estate" placeholder="Enter Your Location" required />
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">House Number</label>
+                  <input type="text" class="form-control" id="house-number" placeholder="Enter Your House Number"
+                      required />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./JS/script.js"></script>
+</html>
